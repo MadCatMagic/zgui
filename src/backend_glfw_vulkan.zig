@@ -1,6 +1,6 @@
 const gui = @import("gui.zig");
-const backend_glfw = @import("backend_glfw.zig");
-const backend_vulkan = @import("backend_vulkan.zig");
+pub const backend_glfw = @import("backend_glfw.zig");
+pub const backend_vulkan = @import("backend_vulkan.zig");
 
 pub const VkHandle = backend_vulkan.VkHandle;
 pub const VkPipelineRenderingCreateInfo = backend_vulkan.VkPipelineRenderingCreateInfo;

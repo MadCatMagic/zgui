@@ -41,4 +41,9 @@ pub fn draw() void {
 extern fn ImGui_ImplOpenGL3_Init(glsl_version: [*c]const u8) void;
 extern fn ImGui_ImplOpenGL3_Shutdown() void;
 extern fn ImGui_ImplOpenGL3_NewFrame() void;
-extern fn ImGui_ImplOpenGL3_RenderDrawData(data: *const anyopaque) void;
+pub extern fn ImGui_ImplOpenGL3_RenderDrawData(data: *const anyopaque) void;
+
+pub extern fn ImGui_ImplGlfw_CursorPosCallback(window: *const anyopaque, x: f64, y: f64) void; // Since 1.87
+pub extern fn ImGui_ImplGlfw_MouseButtonCallback(window: *const anyopaque, button: c_int, action: c_int, mods: c_int) void;
+pub extern fn ImGui_ImplGlfw_ScrollCallback(window: *const anyopaque, xoffset: f64, yoffset: f64) void;
+pub extern fn ImGui_ImplGlfw_KeyCallback(window: *const anyopaque, key: c_int, scancode: c_int, action: c_int, mods: c_int) void;

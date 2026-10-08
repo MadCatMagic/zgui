@@ -428,7 +428,7 @@ extern fn zguiSetClipboardText(text: [*:0]const u8) void;
 extern fn zguiGetClipboardText() [*:0]const u8;
 //--------------------------------------------------------------------------------------------------
 pub const Context = *opaque {};
-pub const DrawData = *extern struct {
+pub const DrawData = ?*extern struct {
     valid: bool,
     cmd_lists_count: c_int,
     total_idx_count: c_int,

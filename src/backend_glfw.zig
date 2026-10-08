@@ -42,3 +42,8 @@ extern fn ImGui_ImplGlfw_InitForOpenGL(window: *const anyopaque, install_callbac
 extern fn ImGui_ImplGlfw_InitForVulkan(window: *const anyopaque, install_callbacks: bool) bool;
 extern fn ImGui_ImplGlfw_NewFrame() void;
 extern fn ImGui_ImplGlfw_Shutdown() void;
+
+pub extern fn ImGui_ImplGlfw_CursorPosCallback(window: *const anyopaque, x: f64, y: f64) void; // Since 1.87
+pub extern fn ImGui_ImplGlfw_MouseButtonCallback(window: *const anyopaque, button: c_int, action: c_int, mods: c_int) void;
+pub extern fn ImGui_ImplGlfw_ScrollCallback(window: *const anyopaque, xoffset: f64, yoffset: f64) void;
+pub extern fn ImGui_ImplGlfw_KeyCallback(window: *const anyopaque, key: c_int, scancode: c_int, action: c_int, mods: c_int) void;

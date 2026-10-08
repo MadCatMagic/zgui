@@ -88,3 +88,6 @@ extern fn ImGui_ImplVulkan_LoadFunctions(
     loader_func: *const fn (function_name: [*:0]const u8, user_data: ?*anyopaque) callconv(.c) ?*anyopaque,
     user_data: ?*anyopaque,
 ) bool;
+
+pub extern fn ImGui_ImplVulkan_AddTexture(image_view: VkHandle, image_layout: VkHandle) VkHandle;
+pub extern fn ImGui_ImplVulkan_RemoveTexture(descriptor_set: VkHandle) void;
