@@ -77,7 +77,7 @@ pub fn set_min_image_count(min_image_count: u32) void {
 extern fn ImGui_ImplVulkan_Init(init_info: *ImGui_ImplVulkan_InitInfo) bool;
 extern fn ImGui_ImplVulkan_Shutdown() void;
 extern fn ImGui_ImplVulkan_NewFrame() void;
-extern fn ImGui_ImplVulkan_RenderDrawData(
+pub extern fn ImGui_ImplVulkan_RenderDrawData(
     draw_data: *const anyopaque, // *ImDrawData
     command_buffer: VkHandle, // VkCommandBuffer
     pipeline: VkHandle,
@@ -89,5 +89,5 @@ extern fn ImGui_ImplVulkan_LoadFunctions(
     user_data: ?*anyopaque,
 ) bool;
 
-pub extern fn ImGui_ImplVulkan_AddTexture(image_view: VkHandle, image_layout: VkHandle) VkHandle;
+pub extern fn ImGui_ImplVulkan_AddTexture(sampler: VkHandle, image_view: VkHandle, image_layout: VkHandle) VkHandle;
 pub extern fn ImGui_ImplVulkan_RemoveTexture(descriptor_set: VkHandle) void;
